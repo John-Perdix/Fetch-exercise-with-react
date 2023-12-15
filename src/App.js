@@ -1,25 +1,115 @@
-import logo from './logo.svg';
-import './App.css';
+/*import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+import Menu from './components/menu/Menu.js';
+import Homepage from './pages/homepage/Homepage.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
+     <BrowserRouter>
+        <Menu>
+            <Routes>
+              <Route path="/">
+                <Route index element={<Homepage />} />
+              </Route>
+            </Routes>
+          </Menu>
+        </BrowserRouter>
     </div>
   );
 }
 
+export default App;*/
+import React from 'react';
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import MenuNav from './components/menu/MenuNav.js';
+import Homepage from './pages/homepage/Homepage.js';
+
+import { Breadcrumb, Layout, Menu, theme } from 'antd';
+const { Header, Content, Footer } = Layout;
+const items = new Array(15).fill(null).map((_, index) => ({
+  key: index + 1,
+  label: `nav ${index + 1}`,
+}));
+
+
+const App = () => {
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
+  return (
+    <Layout style={{minHeight: '100vh'}}>
+      <Header
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <div className="demo-logo" />
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={['2']}
+          items={items}
+          style={{
+            flex: 1,
+            minWidth: 0,
+          }}
+        />
+      </Header>
+      <Content
+        style={{
+          padding: '0 48px',
+        }}
+      >
+        <Breadcrumb
+          style={{
+            margin: '16px 0',
+          }}
+        >
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>List</Breadcrumb.Item>
+          <Breadcrumb.Item>App</Breadcrumb.Item>
+        </Breadcrumb>
+        <div
+          style={{
+            background: colorBgContainer,
+            minHeight: 280,
+            padding: 24,
+            borderRadius: borderRadiusLG,
+          }}>
+          <div className="App">
+      
+
+      <BrowserRouter>
+         <MenuNav>
+             <Routes>
+               <Route path="/">
+                 <Route index element={<Homepage />} />
+               </Route>
+             </Routes>
+           </MenuNav>
+         </BrowserRouter>
+     </div>
+     
+        </div>
+      </Content>
+      <Footer
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        Ant Design ©2023 Created by Ant UED
+      </Footer>
+    </Layout>
+  );
+};
+
 export default App;
+  
