@@ -11,7 +11,7 @@ const Homepage = () => {
 
     const fetchCharacters = async () => {
         setLoading(true);
-        await fetch(API_URL + '/character')
+        await fetch(API_URL + '/character/?page=')
             .then(response => response.json())
             .then(result => {
                 setCharacters(result.results)

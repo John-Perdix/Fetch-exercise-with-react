@@ -23,3 +23,11 @@ code {
 .layout {
   min-height: 100vh;
 }
+
+@media only screen and (max-width: 959px){
+
+  .space-around{
+    justify-content: space-around;
+  }
+  
+}
