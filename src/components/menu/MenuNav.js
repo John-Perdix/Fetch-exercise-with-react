@@ -5,6 +5,7 @@ const MenuNav = ({ children }) => {
 		<>
 			<nav className="navbar">
 				<Link to="/">Home</Link>
+				<Link to="//characters/:characterId">Character</Link>
 			</nav>
 			<div>{children}</div>
 		</>

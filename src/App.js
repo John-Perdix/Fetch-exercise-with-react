@@ -1,39 +1,20 @@
-/*import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
-import Menu from './components/menu/Menu.js';
-import Homepage from './pages/homepage/Homepage.js';
-
-function App() {
-  return (
-    <div className="App">
-      
-
-     <BrowserRouter>
-        <Menu>
-            <Routes>
-              <Route path="/">
-                <Route index element={<Homepage />} />
-              </Route>
-            </Routes>
-          </Menu>
-        </BrowserRouter>
-    </div>
-  );
-}
-
-export default App;*/
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MenuNav from './components/menu/MenuNav.js';
 import Homepage from './pages/homepage/Homepage.js';
+import CharacterPage from './pages/character/CharacterPage.js';
+import EpisodesPage from './pages/episodes/EpisodesPage.js';
+import LocationsPage from './pages/locationsPage/LocationsPage.js'
 
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+
+
+
 const { Header, Content, Footer } = Layout;
-const items = new Array(15).fill(null).map((_, index) => ({
+const items = new Array(3).fill(null).map((_, index) => ({
   key: index + 1,
   label: `nav ${index + 1}`,
 }));
@@ -73,9 +54,8 @@ const App = () => {
             margin: '16px 0',
           }}
         >
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>aRICKive</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb>
         <div
           style={{
@@ -93,6 +73,18 @@ const App = () => {
                <Route path="/">
                  <Route index element={<Homepage />} />
                </Route>
+
+               <Route  path="/characters/:characterId">
+                 <Route index element={<CharacterPage/>} />
+               </Route>
+
+               <Route  path="/episodes">
+                 <Route index element={<EpisodesPage/>} />
+               </Route>
+               
+               <Route  path="/locations">
+                 <Route index element={<LocationsPage/>} />
+               </Route>
              </Routes>
            </MenuNav>
          </BrowserRouter>
@@ -105,11 +97,10 @@ const App = () => {
           textAlign: 'center',
         }}
       >
-        Ant Design ©2023 Created by Ant UED
+        aRICKive ©2023 Created by Perdix
       </Footer>
-    </Layout>
+    </Layout >
   );
 };
 
 export default App;
-  

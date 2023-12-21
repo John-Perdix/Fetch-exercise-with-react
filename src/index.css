@@ -31,3 +31,18 @@ code {
   }
   
 }
+
+.padding-1{
+  padding: 1em;
+}
+.padding-2{
+  padding: 2em;
+}
+
+ .margin-auto{
+  margin: auto;
+ }
+
+.flex-end{
+  align-items: flex-end;
+}
