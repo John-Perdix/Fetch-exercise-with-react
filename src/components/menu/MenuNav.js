@@ -28,7 +28,7 @@ const items = navItems.map((item, index) => ({
 const MenuNav = () => {
   return (
     <div className="demo-logo flex" >
-    <img src={logo} alt='Logotype' width='150px'/>
+    <Link to='/'><img src={logo} alt='Logotype' width='150px'/></Link>
       <Menu
         mode="horizontal"
         items={items}
