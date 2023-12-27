@@ -66,9 +66,7 @@ const FilterOptions = ({ onSearch, fetchCharacters, fetchStatus, fetchGender }) 
     console.log('valueStatus:', valueStatus);
     setLabelStatus(valueStatus);
     console.log('After setLabelStatus - label:'+ labelStatus);
-      
     };
-
 
     const handleGender = (valueGender) =>{
       fetchGender(valueGender);
@@ -133,7 +131,7 @@ console.log('Label status updated:', labelStatus);
             Female
           </Radio.Button>
           <Radio.Button value="genderless">Genderless</Radio.Button>
-          <Radio.Button value="unknown">unknown</Radio.Button>
+          <Radio.Button value="unknown">Unknown</Radio.Button>
         </Radio.Group>
       </div>
 

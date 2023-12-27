@@ -23,11 +23,11 @@ const CharacterList = ({ characters }) => {
 							>
 								<Meta title={character.name} />
 								{character.status === 'Alive' ? (
-									<Tag color="#5CAD4A">{character.status}</Tag>
+									<Tag className='margin-1' color="#5CAD4A">{character.status}</Tag>
 								) : character.status === 'Dead' ? (
-									<Tag color="#e89ac7">{character.status}</Tag>
+									<Tag className='margin-1' color="#fb6467ff">{character.status}</Tag>
 								) : character.status === 'unknown' ? (
-									<Tag color="#f0e14a">Unknown</Tag>
+									<Tag className='margin-1' color="#f0e14a">Unknown</Tag>
 								) : (
 									null
 								)}

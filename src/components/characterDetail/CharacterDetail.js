@@ -6,7 +6,6 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { Divider, List, Skeleton } from 'antd';
 
 import Loading from '../loading/Loading';
-import FilterOptions from '../filterOptions/FilterOptions';
 
 
 const { Meta } = Card;
@@ -65,14 +64,11 @@ const CharacterDetail = ({ character }) => {
 
     const characterDetails = !loading ? (
         <div>
-        <div>
-        <FilterOptions/>
-        </div>
         <div
             id="scrollableDiv"
             style={{
                 height: 400,
-                width: 1200,
+                width: 1000,
                 overflow: 'auto',
                 padding: '0 16px',
                 border: '1px solid rgba(140, 140, 140, 0.35)',

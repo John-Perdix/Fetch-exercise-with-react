@@ -31,7 +31,7 @@ const LocationList= ({ locations }) => {
 	return (
 		<div>
 
-			<p>Isto são episodio malandro</p>
+			<h1>Locations</h1>
 			
 				<Table size='25' dataSource={locations} columns={columns} />
 			
