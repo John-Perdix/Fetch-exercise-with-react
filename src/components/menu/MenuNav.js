@@ -1,15 +1,45 @@
 import { Link } from 'react-router-dom';
+import { Menu } from 'antd';
+import  logo  from '../../logo_RM-02.png'
 
-const MenuNav = ({ children }) => {
-	return (
-		<>
-			<nav className="navbar">
-				<Link to="/">Home</Link>
-				<Link to="//characters/:characterId">Character</Link>
-			</nav>
-			<div>{children}</div>
-		</>
-		)
+
+const navItems = [{
+  name: 'Characters',
+  path: '/'
+},
+{
+  name: 'Episodes',
+  path: '/episodes'
+},
+{
+  name: 'Locations',
+  path: '/locations'
+}];
+const items = navItems.map((item, index) => ({
+  key: index + 1,
+  label: (
+    <Link to={item.path} style={{ color: 'white' }}>
+      {item.name}
+    </Link>
+  )
+}));
+
+//menu do ant design
+const MenuNav = () => {
+  return (
+    <div className="demo-logo flex" >
+    <img src={logo} alt='Logotype' width='150px'/>
+      <Menu
+        mode="horizontal"
+        items={items}
+        style={{
+          flex: 1,
+          minWidth: 0,
+        }}
+      />
+
+    </div>
+  )
 }
 
 export default MenuNav;
