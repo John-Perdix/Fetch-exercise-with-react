@@ -1,5 +1,4 @@
 import React from 'react';
-import FilterOptions from '../filterOptions/FilterOptions';
 import {  Table } from 'antd';
 
 const columns = [
@@ -24,11 +23,7 @@ const columns = [
 const EpisodeList = ({ episodes }) => {
 
 	return (
-		<div>
-
-			<p>Isto são episodio malandro</p>
-			<FilterOptions />
-			
+		<div>			
 				<Table size='25' dataSource={episodes} columns={columns} />
 			
 		</div>

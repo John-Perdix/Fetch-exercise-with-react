@@ -40,16 +40,6 @@ const EpisodesPage = () => {
                     console.log(allEpisodes)
                 });
         }
-
-
-        /* setLoading(true);
-        await fetch(API_URL + '/episode')
-            .then(response => response.json())
-            .then(result => {
-                setEpisodes(result.results)
-                setLoading(false)
-                console.log(result.results)
-            }); */
     }
 
     useEffect(() => {

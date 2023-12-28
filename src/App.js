@@ -4,24 +4,23 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MenuNav from './components/menu/MenuNav.js';
-import BreadcrumbComponent from './components/breadcrumb/BreadcrumbComponent.js';
 import ContentComponent from './components/contentComponent/ContentComponent.js';
 import Homepage from './pages/homepage/Homepage.js';
 import CharacterPage from './pages/character/CharacterPage.js';
 import EpisodesPage from './pages/episodes/EpisodesPage.js';
 import LocationsPage from './pages/locationsPage/LocationsPage.js';
 
-import { Breadcrumb, Layout, theme, ConfigProvider } from 'antd';
-
-
+import { Layout, theme, ConfigProvider } from 'antd';
 
 const { Header, Content, Footer } = Layout;
-
 
 const App = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+
+
   return (
     <ConfigProvider
     theme={{
@@ -55,15 +54,6 @@ const App = () => {
           padding: '0 48px',
         }}
       >
-
-        <Breadcrumb
-          style={{
-            margin: '16px 0',
-          }}
-        >
-          <Breadcrumb.Item>aRICKive</Breadcrumb.Item>
-          <Breadcrumb.Item>path</Breadcrumb.Item>
-        </Breadcrumb>
         <div
         className='wrap'
           style={{
