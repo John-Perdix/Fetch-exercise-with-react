@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Fetch-exercise-with-react/static/css/main.1d2e2c6e.css",
-    "main.js": "/Fetch-exercise-with-react/static/js/main.860f47c0.js",
-    "static/js/787.38b0d000.chunk.js": "/Fetch-exercise-with-react/static/js/787.38b0d000.chunk.js",
-    "static/media/logo_RM-02.png": "/Fetch-exercise-with-react/static/media/logo_RM-02.a6353c6dcadeab6e8553.png",
-    "index.html": "/Fetch-exercise-with-react/index.html",
-    "main.1d2e2c6e.css.map": "/Fetch-exercise-with-react/static/css/main.1d2e2c6e.css.map",
-    "main.860f47c0.js.map": "/Fetch-exercise-with-react/static/js/main.860f47c0.js.map",
-    "787.38b0d000.chunk.js.map": "/Fetch-exercise-with-react/static/js/787.38b0d000.chunk.js.map"
+    "main.css": "/Fetch-exercise-with-react.git/static/css/main.1d2e2c6e.css",
+    "main.js": "/Fetch-exercise-with-react.git/static/js/main.ccb766a0.js",
+    "static/js/787.38b0d000.chunk.js": "/Fetch-exercise-with-react.git/static/js/787.38b0d000.chunk.js",
+    "static/media/logo_RM-02.png": "/Fetch-exercise-with-react.git/static/media/logo_RM-02.a6353c6dcadeab6e8553.png",
+    "index.html": "/Fetch-exercise-with-react.git/index.html",
+    "main.1d2e2c6e.css.map": "/Fetch-exercise-with-react.git/static/css/main.1d2e2c6e.css.map",
+    "main.ccb766a0.js.map": "/Fetch-exercise-with-react.git/static/js/main.ccb766a0.js.map",
+    "787.38b0d000.chunk.js.map": "/Fetch-exercise-with-react.git/static/js/787.38b0d000.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d2e2c6e.css",
-    "static/js/main.860f47c0.js"
+    "static/js/main.ccb766a0.js"
   ]
 }
